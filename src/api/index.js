@@ -1,6 +1,8 @@
 const BASE_URL = "https://mhw-db.com"
 
 export const getAllAilments = async () => {
+
+    // "Get"s the Data
     const options = {
         method: "GET",
         headers: {
@@ -8,12 +10,11 @@ export const getAllAilments = async () => {
         }
     }
 
-    const response = await fetch(`${BASE_URL}/ailments`)
-    const result = await response.json()
+    // This specifies the Url it pulls from
+    const response = await fetch(`${BASE_URL}/ailments`, options);
+    const result = await response.json();
 
-    console.log(result, "this is ailments")
     return result;
-
 }
 
 export const GetAllWeapons = async () => {
@@ -23,10 +24,8 @@ export const GetAllWeapons = async () => {
         }
     }
 
-    const response = await fetch(`${BASE_URL}/weapons`,options)
-    const result = await response.json()
-    console.log(result, "weapons")
-
+    const response = await fetch(`${BASE_URL}/weapons`,options);
+    const result = await response.json();
+ 
     return result;
-
 }

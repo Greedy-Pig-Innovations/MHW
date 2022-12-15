@@ -18,9 +18,10 @@ const AllWeapons = () => {
             <div>
                 {weaponData.length ? weaponData.map((weapons,index) => {
                     return (<div id="singleWeapon" key={`weapon- ${index}`}>
-                        <h2>{weapons.name}</h2>
+                        <h4>{weapons.name}</h4>
                         <p>{weapons.type}</p>
-                        
+
+                     
                     </div>)
                 }): <p>weapons loading....</p>}
             </div>
