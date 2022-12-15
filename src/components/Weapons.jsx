@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Weapons } from ".";
 import { GetAllWeapons } from "../api";
 
 const AllWeapons = () => {
@@ -13,9 +14,17 @@ const AllWeapons = () => {
         getWeapons();
     },[])
 
-    return (<div>
-        <h2>Weapons</h2>
-    </div>)
+        return (
+            <div>
+                {weaponData.length ? weaponData.map((weapons,index) => {
+                    return (<div id="singleWeapon" key={`weapon- ${index}`}>
+                        <h2>{weapons.name}</h2>
+                        <p>{weapons.type}</p>
+                        
+                    </div>)
+                }): <p>weapons loading....</p>}
+            </div>
+        )
 
 }
 
