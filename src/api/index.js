@@ -16,6 +16,17 @@ export const getAllAilments = async () => {
 
 }
 
-export const getSpecificAilment = async () => {
+export const GetAllWeapons = async () => {
+    const options = {
+        headers: {
+            "Content-Type" : 'application/json'
+        }
+    }
+
+    const response = await fetch(`${BASE_URL}/weapons`,options)
+    const result = await response.json()
+    console.log(result, "weapons")
+
+    return result;
 
 }
