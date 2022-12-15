@@ -7,7 +7,7 @@ const Main = () => {
 
     const router = createBrowserRouter(
         createRoutesFromElements(
-            <Route path="/" element={<Navbar />} >
+            <Route path="/" element={<Weapons />} >
                 <Route path="Ailments" element={<Ailments />} />
                 <Route path="Weapons" element={<Weapons />} />
 
