@@ -2,17 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Weapons } from ".";
 import { GetAllWeapons } from "../api";
 
-const AllWeapons = () => {
-    const [weaponData,setWeaponData] = useState([])
+const AllWeapons = (props) => {
+   const  weaponData = props.weaponData
 
-    useEffect(() => {
-        const getWeapons = async () => {
-            const weapons = await GetAllWeapons()
-            console.log(weapons)
-            setWeaponData(weapons)   
-        }
-        getWeapons();
-    },[])
 
         return (
             <div className="container">
