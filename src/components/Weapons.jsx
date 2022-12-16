@@ -16,9 +16,9 @@ const AllWeapons = () => {
 
         return (
             <div className="container">
-                <div className="row row-cols g-3">
+                <div className="row g-3">
                 {weaponData.length ? weaponData.map((weapons,index) => {
-                    return (<div className="col" key={`weapons- ${index}`}>
+                    return (<div className="col" style={{border:"2px solid black", backgroundColor: "lightgray", margin:"5px"}} key={`weapons- ${index}`}>
                         <h4>{weapons.name}</h4>
                         <p>{weapons.type}</p>                      
                         <img src={filter(weapons.assets)?weapons.assets.image:"N/A"}/>
