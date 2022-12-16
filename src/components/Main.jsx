@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from "react";
 import { createBrowserRouter, RouterProvider, Route, createRoutesFromElements,Router } from "react-router-dom";
+
 import {Ailments,Navbar,Weapons, Home, GreatSword} from './'
 import { GetAllWeapons } from "../api";
-
 
 const Main = ()=> {
     const [weaponData,setWeaponData] = useState([])
@@ -26,6 +26,7 @@ const Main = ()=> {
                 <Route path="Ailments" element={<Ailments />} />
                 <Route path="Weapons" element={<Weapons weaponData={weaponData}/>} />
                 <Route path="GreatSword" element={<GreatSword weaponData={weaponData}/> } />
+
             </Route>
             )
         );
