@@ -23,8 +23,8 @@ const AllWeapons = () => {
 
                         
                         
-                        <img src={filter(weapons.assets)?weapons.assets.image:"N/A"}></img>
-                        <img src={filter(weapons.assets)?weapons.assets.icon:"N/A"}></img>
+                        <img src={filter(weapons.assets)?weapons.assets.image:"N/A"}/>
+                        <img src={filter(weapons.assets)?weapons.assets.icon:"N/A"}/>
                         <p>{index}</p>
                     </div>)
                 }): <p>weapons loading....</p>}
