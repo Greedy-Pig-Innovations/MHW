@@ -15,20 +15,20 @@ const AllWeapons = () => {
     },[])
 
         return (
-            <div>
+            <div className="container">
+                <div className="row row-cols g-3">
                 {weaponData.length ? weaponData.map((weapons,index) => {
-                    return (<div id="singleWeapon" key={`weapons- ${index}`}>
+                    return (<div className="col" key={`weapons- ${index}`}>
                         <h4>{weapons.name}</h4>
-                        <p>{weapons.type}</p>
-
-                        
-                        
+                        <p>{weapons.type}</p>                      
                         <img src={filter(weapons.assets)?weapons.assets.image:"N/A"}/>
                         <img src={filter(weapons.assets)?weapons.assets.icon:"N/A"}/>
                         <p>{index}</p>
-                    </div>)
+                    </div>
+                    )
                 }): <p>weapons loading....</p>}
             </div>
+           </div>
         )
 
 
@@ -36,7 +36,6 @@ const AllWeapons = () => {
 function filter(assets){
     if (assets)
     {
-        console.log("cool")
         return true;
     }
     else
