@@ -17,15 +17,30 @@ const AllWeapons = () => {
         return (
             <div>
                 {weaponData.length ? weaponData.map((weapons,index) => {
-                    return (<div id="singleWeapon" key={`weapon- ${index}`}>
-                        <h2>{weapons.name}</h2>
+                    return (<div id="singleWeapon" key={`weapons- ${index}`}>
+                        <h4>{weapons.name}</h4>
                         <p>{weapons.type}</p>
+
                         
+                        
+                        <img src={filter(weapons.assets)?weapons.assets.image:"N/A"}></img>
+                        <img src={filter(weapons.assets)?weapons.assets.icon:"N/A"}></img>
+                        <p>{index}</p>
                     </div>)
                 }): <p>weapons loading....</p>}
             </div>
         )
 
+
+}
+function filter(assets){
+    if (assets)
+    {
+        console.log("cool")
+        return true;
+    }
+    else
+        return false;
 }
 
 export default AllWeapons;
