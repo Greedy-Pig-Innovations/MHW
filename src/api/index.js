@@ -29,14 +29,14 @@ export const GetAllWeapons = async () => {
  
     return result;
 }
-export const GetAllArmorSets = async ()=>{
+export const GetAllArmor = async ()=>{
     const options = {
         headers:{
             "Content-Type" : 'application/json'
         }
     }
 
-    const response = await fetch(`${BASE_URL}/armor/sets`, options);
+    const response = await fetch(`${BASE_URL}/armor`, options);
     const result = await response.json();
 
     return result;
