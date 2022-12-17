@@ -13,7 +13,7 @@ const Navbar = () => {
                         </li>
                         <li>
                             <a href="/ArmorSets">Armor Sets</a>
-                        <li/>
+                        </li>
                         <li className="dropdown">
                             <a className="dropdown-toggle" data-toggle="dropdown" href="#" style={{margin:"5px"}}>
                                 Weapons
