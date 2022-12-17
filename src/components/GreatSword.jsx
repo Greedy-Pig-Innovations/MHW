@@ -3,6 +3,13 @@ import React, { useEffect, useState } from "react";
 const GreatSword = (props) => {
     const weaponData = props.weaponData
     const [gsData,setGsData] = useState([])
+    const filter = (assets)=>{
+        if (assets)
+            return true;
+
+        else
+            return false;
+    }
 
     useEffect(() => {
         if (weaponData){
@@ -13,17 +20,8 @@ const GreatSword = (props) => {
     },[weaponData]);
 
 
-    function filter(assets){
-        if (assets)
-        {
-            return true;
-        }
-        else
-            return false;
-    }
-
     return (
-        <div className="container">
+        <div className="container p-3 my-3 bg-dark text-white">
             <div className="row">
                 {gsData.length ? (gsData.map((weapon,index) => {
                     return (

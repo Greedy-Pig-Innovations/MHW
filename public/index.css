@@ -1,7 +1,9 @@
 body{
     margin: 0;
-    background-image: url("http://www.monsterhunterworld.com/images/top/thumb/img_boost.jpg");
-    background-size: fill;
+    background-color: black;
+    background-image: url("https://images5.alphacoders.com/901/901108.png");
+    background-size: 100%;
+    background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
