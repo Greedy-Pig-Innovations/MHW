@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Weapons } from ".";
 import { GetAllWeapons } from "../api";
 
 const AllWeapons = () => {
@@ -16,14 +15,16 @@ const AllWeapons = () => {
 
         return (
             <div className="container">
-                <div className="row row-cols g-3">
+                <div className="row row-cols g-3 ">
                 {weaponData.length ? weaponData.map((weapons,index) => {
                     return (<div className="col" key={`weapons- ${index}`}>
-                        <h4>{weapons.name}</h4>
-                        <p>{weapons.type}</p>                      
-                        <img src={filter(weapons.assets)?weapons.assets.image:"N/A"}/>
-                        <img src={filter(weapons.assets)?weapons.assets.icon:"N/A"}/>
-                        <p>{index}</p>
+                        {/* //<p>{index}</p> */}
+                        <div className="border border-1 border-dark rounded pill" style={{backgroundColor: '#cccccc'}}>
+                            <img src={filter(weapons.assets)?weapons.assets.image:"N/A"}/>
+                            <img src={filter(weapons.assets)?weapons.assets.icon:"N/A"}/>
+                            <h4>{weapons.name}</h4>
+                            <p>{weapons.type}</p>                      
+                        </div>
                     </div>
                     )
                 }): <p>weapons loading....</p>}

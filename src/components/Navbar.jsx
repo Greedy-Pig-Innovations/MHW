@@ -10,6 +10,7 @@ const Navbar = () => {
                 <div className="navbar-nav">
                     <a className="nav-item nav-link active" href="/Ailments">Ailments <span className="sr-only">(current)</span></a>
                     <a className="nav-item nav-link" href="/Weapons">Weapons</a>
+                    <a className="nav-item nav-link" href="/ArmorSets">Armor Sets</a>
                 </div>
                 </div>
             </nav>
