@@ -11,6 +11,9 @@ const Navbar = () => {
                         <li>
                             <a href="/Ailments">Ailments</a>
                         </li>
+                        <li>
+                            <a href="/ArmorSets">Armor Sets</a>
+                        </>
                         <li className="dropdown">
                             <a className="dropdown-toggle" data-toggle="dropdown" href="#" style={{margin:"5px"}}>
                                 Weapons

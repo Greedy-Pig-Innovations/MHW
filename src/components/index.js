@@ -3,5 +3,6 @@ export {default as Ailments} from './Ailments';
 export {default as Navbar} from './Navbar';
 export {default as Weapons} from './Weapons';
 export {default as Home} from './Home';
+export {default as ArmorSets} from './ArmorSets';
 export {default as GreatSword} from './GreatSword'
 
