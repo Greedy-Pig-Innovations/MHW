@@ -2,16 +2,11 @@ body{
     margin: 0;
     background-color: black;
     background-image: url("https://images5.alphacoders.com/901/901108.png");
-    background-size: 100%;
+    background-size: cover;
     background-attachment: fixed;
-    background-repeat: no-repeat;
+    background-position: center top;
 }
 
 ul li a{
     color:white;
-}
-
-.text-secondary{
-    margin:2px ;
-    margin-left: 5px;
 }

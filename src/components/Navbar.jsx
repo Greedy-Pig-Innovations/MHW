@@ -5,75 +5,45 @@ const Navbar = () => {
     return (
         <div>
             <nav className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
-                <a className="navbar-brand " href="/"><h3>Monster Hunter World</h3></a>
-                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <ul className="nav navbar-nav">
-                        <li>
-                            <a href="/Ailments">
-                                <button type="button" class="btn btn-dark">
-                                    Ailments
-                                </button>
-                            </a>   
-                        </li>
-                        <li>
-                            <a href="/ArmorSets">
-                                <button type="button" class="btn btn-dark">
-                                    Armor Sets
-                                </button>
-                            </a>
-                        </li>
-                        <li className="dropdown">
-                                <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown">
+                {/*--This is the Page Logo/title */}
+                <a className="navbar-brand" href="/">Monster Hunter World</a>
+                
+                {/* this is the icon used for the Navbar collapse in smaller screens */}
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+
+                {/* this is the Navigation bars content*/}
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul className="nav navbar-nav">
+                            <li className="nav-item">
+                                <a className="nav-link" href="/Ailments">Ailments</a>   
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="/ArmorSets">Armor Sets</a>
+                            </li>
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" id="weaponsDropdownLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Weapons
-                                </button>
-                            <ul className="dropdown-menu" role="menu">
-                                <li>
-                                    <a className="text-secondary" href="/GreatSword">Great Sword</a>
-                                </li>
-                                <li>
-                                    <a className="text-secondary" href="#">Long Sword</a>
-                                </li>
-                                <li>
-                                    <a className="text-secondary" href="#">Sword and Shield</a>
-                                </li>
-                                <li>
-                                    <a className="text-secondary" href="#">Dual Blades</a>
-                                </li>
-                                <li>
-                                    <a className="text-secondary" href="#">Hammer</a>
-                                </li>
-                                <li>
-                                    <a className="text-secondary" href="#">Hunting Horn</a>
-                                </li>
-                                <li>
-                                    <a className="text-secondary" href="#">Lance</a>
-                                </li>
-                                <li>
-                                    <a className="text-secondary" href="#">Gunlance</a>
-                                </li>
-                                <li>
-                                    <a className="text-secondary" href="#">Switch Axe</a>
-                                </li>
-                                <li>
-                                    <a className="text-secondary" href="#">Chad Blade</a>
-                                </li>
-                                <li>
-                                    <a className="text-secondary" href="#">Insect Glaive</a>
-                                </li>
-                                <li>
-                                    <a className="text-secondary" href="#">Light Bowgun</a>
-                                </li>
-                                <li>
-                                    <a className="text-secondary" href="#">Heavy Bowgun</a>
-                                </li>
-                                <li>
-                                    <a className="text-secondary" href="#">Bow</a>
-                                </li>
-                            </ul>
-                        </li>
-
-
-                    </ul>
+                                </a>
+                                <div className="dropdown-menu" aria-labelledby="weaponsDropdownLink">
+                                        <a className="dropdown-item" href="/GreatSword">Great Sword</a>
+                                        <a className="dropdown-item" href="#">Long Sword</a>
+                                        <a className="dropdown-item" href="#">Sword and Shield</a>
+                                        <a className="dropdown-item" href="#">Dual Blades</a>
+                                        <a className="dropdown-item" href="#">Hammer</a>
+                                        <a className="dropdown-item" href="#">Hunting Horn</a>
+                                        <a className="dropdown-item" href="#">Lance</a>
+                                        <a className="dropdown-item" href="#">Gunlance</a>
+                                        <a className="dropdown-item" href="#">Switch Axe</a>
+                                        <a className="dropdown-item" href="#">Chad Blade</a>
+                                        <a className="dropdown-item" href="#">Insect Glaive</a>
+                                        <a className="dropdown-item" href="#">Light Bowgun</a>
+                                        <a className="dropdown-item" href="#">Heavy Bowgun</a>
+                                        <a className="dropdown-item" href="#">Bow</a>
+                                </div>
+                            </li>
+                        </ul>
                 </div>
             </nav>
             <Outlet/>
