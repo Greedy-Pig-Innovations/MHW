@@ -27,20 +27,20 @@ const Navbar = () => {
                                     Weapons
                                 </a>
                                 <div className="dropdown-menu" aria-labelledby="weaponsDropdownLink">
-                                        <a className="dropdown-item" href="/GreatSword">Great Sword</a>
-                                        <a className="dropdown-item" href="#">Long Sword</a>
-                                        <a className="dropdown-item" href="#">Sword and Shield</a>
-                                        <a className="dropdown-item" href="#">Dual Blades</a>
-                                        <a className="dropdown-item" href="#">Hammer</a>
-                                        <a className="dropdown-item" href="#">Hunting Horn</a>
-                                        <a className="dropdown-item" href="#">Lance</a>
-                                        <a className="dropdown-item" href="#">Gunlance</a>
-                                        <a className="dropdown-item" href="#">Switch Axe</a>
-                                        <a className="dropdown-item" href="#">Chad Blade</a>
-                                        <a className="dropdown-item" href="#">Insect Glaive</a>
-                                        <a className="dropdown-item" href="#">Light Bowgun</a>
-                                        <a className="dropdown-item" href="#">Heavy Bowgun</a>
-                                        <a className="dropdown-item" href="#">Bow</a>
+                                        <a className="dropdown-item" href="/Great-Sword">Great Sword</a>
+                                        <a className="dropdown-item" href="/Long-Sword">Long Sword</a>
+                                        <a className="dropdown-item" href="/Sword-and-Shield">Sword and Shield</a>
+                                        <a className="dropdown-item" href="Dual-Blades">Dual Blades</a>
+                                        <a className="dropdown-item" href="/Hammer">Hammer</a>
+                                        <a className="dropdown-item" href="/Hunting-Horn">Hunting Horn</a>
+                                        <a className="dropdown-item" href="/Lance">Lance</a>
+                                        <a className="dropdown-item" href="/Gunlance">Gunlance</a>
+                                        <a className="dropdown-item" href="/Switch-Axe">Switch Axe</a>
+                                        <a className="dropdown-item" href="/Charge-Blade">Charge Blade</a>
+                                        <a className="dropdown-item" href="/Insect-Glaive">Insect Glaive</a>
+                                        <a className="dropdown-item" href="/Light-Bow-Gun">Light Bowgun</a>
+                                        <a className="dropdown-item" href="/Heavy-Bow-Gun">Heavy Bowgun</a>
+                                        <a className="dropdown-item" href="/Bow">Bow</a>
                                 </div>
                             </li>
                         </ul>
