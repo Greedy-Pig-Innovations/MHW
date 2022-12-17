@@ -46,7 +46,8 @@ const Navbar = () => {
                         </ul>
                 </div>
             </nav>
-            <Outlet/>
+            
+                    <Outlet/>
         </div>
     )
 }
