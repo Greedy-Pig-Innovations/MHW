@@ -20,7 +20,7 @@ const Navbar = () => {
                                 <a className="nav-link" href="/Ailments">Ailments</a>   
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/ArmorSets">Armor Sets</a>
+                                <a className="nav-link" href="/Armor">Armor</a>
                             </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="weaponsDropdownLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
