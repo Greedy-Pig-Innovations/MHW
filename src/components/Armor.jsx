@@ -16,7 +16,8 @@ const Armor = () => {
         <div className="row gy-5">
             {armorData.length ? (armorData.map((armor, index) => {
                 return (
-                    <div className="col-lg-4 bg-dark text-white " key={`armor-${index}`}>
+                    <div className="col-lg-4 bg-dark text-white armorBG" key={`armor-${index}`}>
+                        
                         <h1>{armor.name}</h1>
                         
                     </div>
