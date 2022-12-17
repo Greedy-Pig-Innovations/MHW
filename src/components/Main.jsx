@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react";
 import { createBrowserRouter, RouterProvider, Route, createRoutesFromElements,Router } from "react-router-dom";
-import {Ailments,Navbar,Weapons, Home, GreatSword, Armor,Bow,ChargeBlade,DualBlades,Gunlance,Hammer,Hbg,HuntingHorn,InsectGlaive,Lance,Lbg,LongSword,SnS,SwitchAxe} from './'
+import {Ailments,Navbar, Home, Armor} from './'
 import { GetAllWeapons } from "../api";
+import { GreatSword,Bow,ChargeBlade,DualBlades,Gunlance,Hammer,Hbg,HuntingHorn,InsectGlaive,Lance,Lbg,LongSword,SnS,SwitchAxe } from "./Weapons";
 
 const Main = ()=> {
     const [weaponData,setWeaponData] = useState([])
@@ -24,7 +25,6 @@ const Main = ()=> {
             <Route path="/" element={<Navbar />} >
                 <Route path="/" element={<Home />}/>
                 <Route path="Ailments" element={<Ailments />} />
-                <Route path="Weapons" element={<Weapons />} />
                 <Route path="Armor" element={<Armor />}/>
                 <Route path="Bow" element={<Bow  weaponData={weaponData}/>} />
                 <Route path="Charge-Blade" element={<ChargeBlade  weaponData={weaponData}/>} />
