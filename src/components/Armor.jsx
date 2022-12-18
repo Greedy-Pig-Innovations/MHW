@@ -18,18 +18,14 @@ const Armor = () => {
     getArmor();
   }, []);
   return (
-    <div className="container">
-        <div className="row ">
+    <div className="container bg-dark">
+        <div className="card-grid">
             {armorData.length ? (armorData.map((armor, index) => {
                 return (
-                    <div className="col-lg-3 mx-4 my-2 bg-dark text-white" key={`armor-${index}`} style={{height: "300px", width: "250px"}}>
-                        
-                        <h4>{armor.name}</h4>
-                        <img class="ml-5"src={filter(armor.assets)?armor.assets.imageFemale:""} style={{height:"auto", width: "130px"}}/>
-                        {/* <img src={filter(armor.assets)?armor.assets.imageMale:""} style={{height:"auto", width: "130px"}}/>
-                        {console.log(armor.name,armor.assets)} */}
-                        <br/><br/><br/>
-                        <p>Rarity: {armor.rarity}</p>
+                    <div className="item-box text-white" key={`armor-${index}`}>
+                        <img src={filter(armor.assets)?armor.assets.imageFemale:""} style={{height:"auto", width: "130px", margin:"auto"}}/>
+                        <p style={{textAlign: "center"}}>{armor.name}</p>
+                        {console.log(armor.name, armor)}
                     </div>
                 );
             })):(<p>Armor loading....</p>)}
