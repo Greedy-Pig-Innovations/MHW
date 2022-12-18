@@ -12,4 +12,5 @@ ul li a{
 }
 .armorBG{
     background-image: url("https://res.cloudinary.com/dofkj8qo6/image/upload/v1671320940/armorBG_uczhik.jpg");
+    background-size: cover;
 }
