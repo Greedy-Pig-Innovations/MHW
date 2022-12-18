@@ -13,3 +13,10 @@ ul li a{
 .armorBox{
     background-color: red;
 }
+
+.weapon-container-outer{
+    display: flex;
+    border: 2px solid black;
+    justify-content: space-between;
+
+}
