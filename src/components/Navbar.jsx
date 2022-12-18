@@ -4,10 +4,11 @@ const Navbar = () => {
 
     return (
         <div>
-            <nav className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+            <nav className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top mb-3">
                 {/*--This is the Page Logo/title */}
-                <a className="navbar-brand" href="/">Monster Hunter World</a>
-                
+                    <a href="/"> 
+                        <img src='https://res.cloudinary.com/dofkj8qo6/image/upload/v1671374400/title_h5zlnv.png' alt="" href="/" className="navbar-brand"style={{height: "60px"}}/>
+                    </a>
                 {/* this is the icon used for the Navbar collapse in smaller screens */}
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
