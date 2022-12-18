@@ -26,5 +26,13 @@ ul li a{
 .card-grid{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+.armorBox{
+    background-color: red;
+}
 
+.weapon-container-outer{
+    display: flex;
+    border: 2px solid black;
+    justify-content: space-between;
 }
