@@ -7,26 +7,31 @@ const Navbar = () => {
         <div>
             <nav className="navbar navbar-expand-sm sticky-top mb-3" style={{backgroundColor: "#191919", height: "100px", fontFamily: "Marcellus Sc"}}>
                 {/*--This is the Page Logo/title */}
-                <a href="/">
+                <a href="/"className="text-light" >
                     <img className="ml-5"src={logo} style={{width:"75px"}}/>
                 </a>
-
-
+                <a href="/">
+                    <div style={{borderRight: "1px solid white", width: "170px"}}>    
+                        <div className="text-light mt-3 navbrand" >
+                            <h6 style={{textAlign:"center"}}>MONSTER HUNTER<br/>- WORLD -</h6>
+                        </div>
+                    </div>
+                </a>
                 {/* this is the icon used for the Navbar collapse in smaller screens */}
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
                 {/* this is the Navigation bars content*/}
-                <div className="collapse navbar-collapse ml-3" id="navbarSupportedContent">
+                <div className="collapse navbar-collapse ml-5" id="navbarSupportedContent">
                         <ul className="nav navbar-nav">
-                            <li className="nav-item">
+                            <li className="nav-item mx-3">
                                 <a className="nav-link" href="/Ailments">Ailments</a>   
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item mx-3">
                                 <a className="nav-link" href="/Armor">Armor</a>
                             </li>
-                            <li className="nav-item dropdown">
+                            <li className="nav-item dropdown mx-3">
                                 <a className="nav-link dropdown-toggle" href="#" id="weaponsDropdownLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Weapons
                                 </a>
