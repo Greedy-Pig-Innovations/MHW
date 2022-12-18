@@ -1,21 +1,24 @@
 import React from "react";
 import {Outlet} from "react-router";
 const Navbar = () => {
+    const logo = "https://res.cloudinary.com/dofkj8qo6/image/upload/v1671388585/b6e51f83c484f783427df4799b1aea80_lnujsq.jpg";
 
     return (
         <div>
-            <nav className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top mb-3">
+            <nav className="navbar navbar-expand-sm sticky-top mb-3" style={{backgroundColor: "#191919", height: "100px", fontFamily: "Marcellus Sc"}}>
                 {/*--This is the Page Logo/title */}
-                    <a href="/"> 
-                        <img src='https://res.cloudinary.com/dofkj8qo6/image/upload/v1671374400/title_h5zlnv.png' alt="" href="/" className="navbar-brand"style={{height: "60px"}}/>
-                    </a>
+                <a href="/">
+                    <img className="ml-5"src={logo} style={{width:"75px"}}/>
+                </a>
+
+
                 {/* this is the icon used for the Navbar collapse in smaller screens */}
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
                 {/* this is the Navigation bars content*/}
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <div className="collapse navbar-collapse ml-3" id="navbarSupportedContent">
                         <ul className="nav navbar-nav">
                             <li className="nav-item">
                                 <a className="nav-link" href="/Ailments">Ailments</a>   

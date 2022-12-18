@@ -24,7 +24,7 @@ const Armor = () => {
                 return (
                     <div className="item-box text-white" key={`armor-${index}`}>
                         <img src={filter(armor.assets)?armor.assets.imageFemale:""} style={{height:"auto", width: "130px", margin:"auto"}}/>
-                        <p style={{textAlign: "center"}}>{armor.name}</p>
+                        <p style={{textAlign: "center", fontFamily: "Marcellus Sc"}}>{armor.name}</p>
                         {console.log(armor.name, armor)}
                     </div>
                 );
