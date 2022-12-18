@@ -17,13 +17,17 @@ const AllAilments = () => {
     },[])
 
     return (
-        <div>
-            {ailmentData.length ? ailmentData.map((ailment,index) => {
-                return (<div id="singleAilment" key={`ailment- ${index}`}>
-                    <h2>{ailment.name}</h2>
-                    <p>{ailment.description}</p>
-                </div>)
-            }): <p>Ailments loading....</p>}
+        <div className="container">
+            <div className="item-stack bg-dark text-light">
+                {ailmentData.length ? ailmentData.map((ailment,index) => {
+                    return (
+                        <div className="item-box2" id="singleAilment" key={`ailment- ${index}`} style={{height: "100px"}}>
+                            <h2>{ailment.name}</h2>
+                            <p>{ailment.description}</p>
+                        </div>
+                    )
+                }):<p>Ailments loading....</p>}
+            </div>
         </div>
     )
 }
