@@ -19,7 +19,7 @@ const Armor = () => {
   }, []);
   return (
     <div className="container bg-dark">
-        <div className="card-grid">
+        <div className="item-grid">
             {armorData.length ? (armorData.map((armor, index) => {
                 return (
                     <div className="item-box text-white" key={`armor-${index}`}>

@@ -23,7 +23,7 @@ ul li a{
     z-index: 2;
     background-color: #393d45;
 }
-.card-grid{
+.item-grid{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
