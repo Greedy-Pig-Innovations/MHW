@@ -1,24 +1,29 @@
 import React, {useState, useEffect} from "react";
+import axios from "axios";
 
-const ChargeBlade = (props) => {
-    const weaponData = props.weaponData
+const ChargeBlade = () => {
     const [cbData,setCbData] = useState([])
+
     const filter = (assets)=>{
-        if (assets)
-            return true;
-
-        else
-            return false;
-    }
-
+                if (assets)
+                    return true;      
+                else
+                    return false;
+            }
+    
     useEffect(() => {
-        if (weaponData){
-            const chargeblade = weaponData.filter(
-                (weapon) => weapon.type === "charge-blade")
-             setCbData(chargeblade)
-        };
-    },[weaponData]);
-
+        axios.get("https://mhw-db.com/weapons", {
+            params: {
+                q: JSON.stringify ({
+                    type: "charge-blade"
+                })
+            }
+        })
+        .then((response) => {
+            setCbData(response.data)
+        })
+       
+    },[])
 
     return (
         <div className="container">

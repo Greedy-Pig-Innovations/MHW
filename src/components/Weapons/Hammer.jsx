@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 
-
-const Hammer = (props) => {
-    const weaponData = props.weaponData
+const Hammer = () => {
     const [hammerData,setHammerData] = useState([])
     const filter = (assets)=>{
         if (assets)
@@ -13,12 +12,18 @@ const Hammer = (props) => {
     }
 
     useEffect(() => {
-        if (weaponData){
-            const hammer = weaponData.filter(
-                (weapon) => weapon.type === "hammer")
-             setHammerData(hammer)
-        };
-    },[weaponData]);
+        axios.get("https://mhw-db.com/weapons", {
+            params: {
+                q: JSON.stringify ({
+                    type: "hammer"
+                })
+            }
+        })
+        .then((response) => {
+            setHammerData(response.data)
+        })
+       
+    },[])
 
 
     return (
