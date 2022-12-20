@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 
-
-const InsectGlaive = (props) => {
-    const weaponData = props.weaponData
+const InsectGlaive = () => {
     const [igData,setIgData] = useState([])
     const filter = (assets)=>{
         if (assets)
@@ -13,13 +12,18 @@ const InsectGlaive = (props) => {
     }
 
     useEffect(() => {
-        if (weaponData){
-            const InsectGlaive = weaponData.filter(
-                (weapon) => weapon.type === "insect-glaive")
-             setIgData(InsectGlaive)
-        };
-    },[weaponData]);
-
+        axios.get("https://mhw-db.com/weapons", {
+            params: {
+                q: JSON.stringify ({
+                    type: "insect-glaive"
+                })
+            }
+        })
+        .then((response) => {
+            setIgData(response.data)
+        })
+       
+    },[])
 
     return (
         <div className="container">

@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
+import axios from "axios";
 
-const DualBlades = (props) => {
-    const weaponData = props.weaponData
-    const [dbData,setdbData] = useState([])
+const DualBlades = () => {
+    const [dbData,setDbData] = useState([])
     const filter = (assets)=>{
         if (assets)
             return true;
@@ -12,12 +12,18 @@ const DualBlades = (props) => {
     }
 
     useEffect(() => {
-        if (weaponData){
-            const dualBlades = weaponData.filter(
-                (weapon) => weapon.type === "dual-blades")
-             setdbData(dualBlades)
-        };
-    },[weaponData]);
+        axios.get("https://mhw-db.com/weapons", {
+            params: {
+                q: JSON.stringify ({
+                    type: "dual-blades"
+                })
+            }
+        })
+        .then((response) => {
+            setDbData(response.data)
+        })
+       
+    },[])
 
 
     return (

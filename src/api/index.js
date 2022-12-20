@@ -1,3 +1,4 @@
+import axios from "axios";
 const BASE_URL = "https://mhw-db.com"
 
 export const getAllAilments = async () => {

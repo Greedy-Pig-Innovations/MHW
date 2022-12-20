@@ -1,8 +1,7 @@
+import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 
-
-const SwitchAxe = (props) => {
-    const weaponData = props.weaponData
+const SwitchAxe = () => {
     const [swaxeData,setSwaxeData] = useState([])
     const filter = (assets)=>{
         if (assets)
@@ -13,12 +12,18 @@ const SwitchAxe = (props) => {
     }
 
     useEffect(() => {
-        if (weaponData){
-            const SwitchAxe = weaponData.filter(
-                (weapon) => weapon.type === "SwitchAxe")
-             setSwaxeData(SwitchAxe)
-        };
-    },[weaponData]);
+        axios.get("https://mhw-db.com/weapons", {
+            params: {
+                q: JSON.stringify ({
+                    type: "switch-axe"
+                })
+            }
+        })
+        .then((response) => {
+            setSwaxeData(response.data)
+        })
+       
+    },[])
 
 
     return (
