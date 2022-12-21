@@ -11,6 +11,7 @@ const Bow = (props) => {
     const imgNotFound = "https://res.cloudinary.com/dofkj8qo6/image/upload/v1671577838/Image_Coming_Soon_zl2uti.png";
 
     const handleClick = (id) => {
+<<<<<<< HEAD
         console.log("clicked item: ", id)
         axios.get(`https://mhw-db.com/weapons/${id}`)
             .then((response) => {
@@ -18,6 +19,14 @@ const Bow = (props) => {
                 setSingleWeapon(response.data)
             })
     }
+=======
+                axios.get(`https://mhw-db.com/weapons/${id}`)
+                .then((response) => {
+                    console.log(response)
+                    setSingleWeapon(response.data)
+                })         
+        }
+>>>>>>> master
 
 
 
@@ -34,6 +43,7 @@ const Bow = (props) => {
                 <div className=" bg-evil" style={{ height: "60vh", textAlign: "center" }}>
                     {singleWeapon && singleWeapon.id ?
                         <div>
+<<<<<<< HEAD
                             <div className="mt-3" style={{ border: "3px solid rgb(100, 50, 150)" }}>
                                 <h2>{singleWeapon.name}</h2>
                             </div>
@@ -50,6 +60,23 @@ const Bow = (props) => {
                                     </div>
                                 )
                             }) : <>None</>}</p>
+=======
+                        <h2>{singleWeapon.name}</h2>
+                        <span>Rarity: {singleWeapon.rarity}</span>
+                        </div>
+                        <img src={singleWeapon.assets.image} />
+                        <div>
+                        <p>Raw: {singleWeapon.attack.raw}</p>
+                        <span>Display:{singleWeapon.attack.display}</span>
+                        </div>
+                        <div>Coatings: {singleWeapon.coatings.length ? singleWeapon.coatings.map((coating, index) => {
+                            return (
+                                <div key={`coating-${index}`}>
+                                    <p>{coating}</p>
+                                </div>
+                            )   
+                        }) : <>None</>}</div>
+>>>>>>> master
                         </div>
                         : <></>}
                 </div>
