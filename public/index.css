@@ -107,12 +107,17 @@ ul li a {
 }
 
 
-.red{
+.sharpness-bar>div:not(.clearfix) {
+    height: 10px;
+    float: left;
+}
+
+.red {
     background-color: #be3843;
 }
 
-.orange{
-    background-color:#d3673d;
+.orange {
+    background-color: #d3673d;
 }
 
 .yellow{
@@ -135,7 +140,10 @@ ul li a {
     background-color: #885aec;
 }
 
-.sharpness-bar>div:not(.clearfix) {
+
+.sharpness-bar{
+    margin: 0 28px 15px;
+    width: 100px;
     height: 10px;
-    float: left;
+    background-color: #1e2325;
 }

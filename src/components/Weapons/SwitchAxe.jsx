@@ -42,12 +42,10 @@ const SwitchAxe = (props) => {
                         <p>Phial Damage: {singleWeapon.phial.damage != null ? singleWeapon.phial.damage : <>None</>}</p>
                         </div>
                         <div>
-                            <div className='sharpness-bar' style={{width: "100px",height:"10px", backgroundColor: "black"}}>
+                            <div className='sharpness-bar-container'>
                                 {singleWeapon.durability.length ? singleWeapon.durability.map((durability, index) => {
-                                    <div key={`durability-${index}`} >
-                                        <div className='red'style={{height:"10px",width: `${Math.floor((durability.red/400) * 100)}px`}}></div>
-                                        {console.log()}
-                                        
+                                   return ( <div  className="sharpness-bar" key={`durability-${index}`} >
+                                        <div className='red' style={{height:"10px",width:`${Math.floor((durability.red/400) * 100)}px`}}></div>    
                                         <div className='orange' style={{height:"10px",width: `${Math.floor((durability.orange/400) * 100)}px`}}></div>
                                         <div className='yellow' style={{height:"10px",width: `${Math.floor((durability.yellow/400) * 100)}px`}}></div>
                                         <div className='green' style={{height:"10px",width: `${Math.floor((durability.green/400) * 100)}px`}}></div>
@@ -56,6 +54,7 @@ const SwitchAxe = (props) => {
                                         <div className='purple' style={{height:"10px",width: `${Math.floor((durability.purple/400) * 100)}px`}}></div>
                                         <div className="clearfix"></div>
                                     </div>
+                                   )
                                 }) : <>None</>} 
                             </div>
                         </div>
