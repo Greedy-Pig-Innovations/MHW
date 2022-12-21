@@ -45,13 +45,13 @@ const SwitchAxe = (props) => {
                             <div className='sharpness-bar-container'>
                                 {singleWeapon.durability.length ? singleWeapon.durability.map((durability, index) => {
                                    return ( <div  className="sharpness-bar" key={`durability-${index}`} >
-                                        <div className='red' style={{height:"10px",width:`${Math.floor((durability.red/400) * 100)}px`}}></div>    
-                                        <div className='orange' style={{height:"10px",width: `${Math.floor((durability.orange/400) * 100)}px`}}></div>
-                                        <div className='yellow' style={{height:"10px",width: `${Math.floor((durability.yellow/400) * 100)}px`}}></div>
-                                        <div className='green' style={{height:"10px",width: `${Math.floor((durability.green/400) * 100)}px`}}></div>
-                                        <div className='blue' style={{height:"10px",width: `${Math.floor((durability.blue/400) * 100)}px`}}></div>
-                                        <div className='white' style={{height:"10px",width: `${Math.floor((durability.white/400) * 100)}px`}}></div>
-                                        <div className='purple' style={{height:"10px",width: `${Math.floor((durability.purple/400) * 100)}px`}}></div>
+                                        <div className='red' style={{width:`${Math.floor((durability.red/400) * 100)}px`}}></div>    
+                                        <div className='orange' style={{width: `${Math.floor((durability.orange/400) * 100)}px`}}></div>
+                                        <div className='yellow' style={{width: `${Math.floor((durability.yellow/400) * 100)}px`}}></div>
+                                        <div className='green' style={{width: `${Math.floor((durability.green/400) * 100)}px`}}></div>
+                                        <div className='blue' style={{width: `${Math.floor((durability.blue/400) * 100)}px`}}></div>
+                                        <div className='white' style={{width: `${Math.floor((durability.white/400) * 100)}px`}}></div>
+                                        <div className='purple' style={{width: `${Math.floor((durability.purple/400) * 100)}px`}}></div>
                                         <div className="clearfix"></div>
                                     </div>
                                    )
