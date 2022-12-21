@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import SingleWeapon from "./SingleWeapon";
+import { imgNotFound } from "../Main";
 
 const Bow = (props) => {
     const bowData = props.bowData
@@ -17,6 +18,7 @@ const Bow = (props) => {
                     setSingleWeapon(response.data)
                 })         
         }
+
 
 
     const filter = (assets) => {
