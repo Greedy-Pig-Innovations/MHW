@@ -105,3 +105,37 @@ ul li a {
 ::-webkit-scrollbar-thumb:hover {
     background: darkgrey;
 }
+
+
+.red{
+    background-color: #be3843;
+}
+
+.orange{
+    background-color:#d3673d;
+}
+
+.yellow{
+    background-color: #c9b232
+}
+
+.green{
+    background-color: #81b034
+}
+
+.blue{
+    background-color: #3a58d7;
+}
+
+.white{
+    background-color: #e2e2e2
+}
+
+.purple{
+    background-color: #885aec;
+}
+
+.sharpness-bar>div:not(.clearfix) {
+    height: 10px;
+    float: left;
+}
