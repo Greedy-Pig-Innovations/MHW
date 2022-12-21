@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { imgNotFound } from '../Main';
 
-const SnS = () => {
-    const [snsData, setSnsData] = useState([])
+const SnS = (props) => {
+    const snsData = props.snsData
     const filter = (assets) => {
         if (assets)
             return true;
@@ -11,21 +11,6 @@ const SnS = () => {
         else
             return false;
     }
-
-    useEffect(() => {
-        axios.get("https://mhw-db.com/weapons", {
-            params: {
-                q: JSON.stringify({
-                    type: "sword-and-shield"
-                })
-            }
-        })
-            .then((response) => {
-                setSnsData(response.data)
-            })
-
-    }, [])
-
 
     return (
         <div className="container-fluid row text-light MHW-font">

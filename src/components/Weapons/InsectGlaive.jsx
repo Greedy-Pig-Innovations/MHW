@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { imgNotFound } from '../Main';
 
-const InsectGlaive = () => {
-    const [igData, setIgData] = useState([])
+const InsectGlaive = (props) => {
+    const igData = props.igData
     const filter = (assets) => {
         if (assets)
             return true;
@@ -12,19 +12,7 @@ const InsectGlaive = () => {
             return false;
     }
 
-    useEffect(() => {
-        axios.get("https://mhw-db.com/weapons", {
-            params: {
-                q: JSON.stringify({
-                    type: "insect-glaive"
-                })
-            }
-        })
-            .then((response) => {
-                setIgData(response.data)
-            })
-
-    }, [])
+ 
 
     return (
         <div className="container-fluid row text-light MHW-font">

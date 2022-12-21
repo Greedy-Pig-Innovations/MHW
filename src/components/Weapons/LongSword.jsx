@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { imgNotFound } from '../Main';
 
-const LongSword = () => {
-    const [lsData, setLsData] = useState([])
+const LongSword = (props) => {
+    const lsData = props.lsData
     const filter = (assets) => {
         if (assets)
             return true;
@@ -11,21 +11,6 @@ const LongSword = () => {
         else
             return false;
     }
-
-    useEffect(() => {
-        axios.get("https://mhw-db.com/weapons", {
-            params: {
-                q: JSON.stringify({
-                    type: "long-sword"
-                })
-            }
-        })
-            .then((response) => {
-                setLsData(response.data)
-            })
-
-    }, [])
-
 
     return (
         <div className="container-fluid row text-light MHW-font">

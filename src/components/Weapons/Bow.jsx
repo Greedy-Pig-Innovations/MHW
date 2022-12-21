@@ -11,7 +11,6 @@ const Bow = (props) => {
     const imgNotFound = "https://res.cloudinary.com/dofkj8qo6/image/upload/v1671577838/Image_Coming_Soon_zl2uti.png";
 
     const handleClick = (id) => {
-        console.log("clicked item: ", id)
                 axios.get(`https://mhw-db.com/weapons/${id}`)
                 .then((response) => {
                     console.log(response)
@@ -39,16 +38,17 @@ const Bow = (props) => {
                         <span>Rarity: {singleWeapon.rarity}</span>
                         </div>
                         <img src={singleWeapon.assets.image} />
-
+                        <div>
                         <p>Raw: {singleWeapon.attack.raw}</p>
                         <span>Display:{singleWeapon.attack.display}</span>
-                        <p>Coatings: {singleWeapon.coatings.length ? singleWeapon.coatings.map((coating, index) => {
+                        </div>
+                        <div>Coatings: {singleWeapon.coatings.length ? singleWeapon.coatings.map((coating, index) => {
                             return (
                                 <div key={`coating-${index}`}>
                                     <p>{coating}</p>
                                 </div>
-                            ) 
-                        }) : <>None</>}</p>
+                            )   
+                        }) : <>None</>}</div>
                         </div>
                  : <></> }
                 </div>
