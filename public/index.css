@@ -105,7 +105,3 @@ ul li a {
 ::-webkit-scrollbar-thumb:hover {
     background: darkgrey;
 }
-
-.bg-evil {
-    background-color: #191919;
-}
