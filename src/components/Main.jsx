@@ -11,6 +11,7 @@ export const imgNotFound = "https://res.cloudinary.com/dofkj8qo6/image/upload/v1
 const Main = () => {
     const [bowData, setBowData] = useState([])
     const [weaponData, setWeaponData] = useState([])
+    const [singleWeapon,setSingleWeapon] = useState([])
 
     useEffect(() => {
         const getWeapons = async () => {
@@ -42,7 +43,7 @@ const Main = () => {
             <Route path="/" element={<Navbar />} >
                 <Route path="/" element={<Home />} />
                 <Route path="Ailments" element={<Ailments />} />
-                <Route path="Bow" element={<Bow bowData={bowData} />} />
+                <Route path="Bow" element={<Bow bowData={bowData} singleWeapon={singleWeapon} setSingleWeapon={setSingleWeapon}/>} />
                 <Route path="Charge-Blade" element={<ChargeBlade weaponData={weaponData} />} />
                 <Route path="Dual-Blades" element={<DualBlades weaponData={weaponData} />} />
                 <Route path="Great-Sword" element={<GreatSword weaponData={weaponData} />} />
@@ -57,8 +58,6 @@ const Main = () => {
                 <Route path="Sword-and-Shield" element={<SnS weaponData={weaponData} />} />
                 <Route path="Switch-Axe" element={<SwitchAxe weaponData={weaponData} />} />
                 <Route path="SingleWeapon" element={<SingleWeapon weaponData={weaponData} />} />
-
-                <Route path="Bow/:id" element={<SingleWeapon weaponData={weaponData} />} />
                 <Route path="Charge-Blade/:id" element={<SingleWeapon weaponData={weaponData} />} />
                 <Route path="Dual-Blades/:id" element={<DualBlades weaponData={weaponData} />} />
                 <Route path="Great-Sword/:id" element={<GreatSword weaponData={weaponData} />} />
