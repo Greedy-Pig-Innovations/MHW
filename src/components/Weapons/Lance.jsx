@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { imgNotFound } from '../Main';
 
-const Lance = () => {
-    const [lanceData, setLanceData] = useState([])
+const Lance = (props) => {
+    const lanceData = props.lanceData
     const filter = (assets) => {
         if (assets)
             return true;
@@ -11,20 +11,6 @@ const Lance = () => {
         else
             return false;
     }
-
-    useEffect(() => {
-        axios.get("https://mhw-db.com/weapons", {
-            params: {
-                q: JSON.stringify({
-                    type: "lance"
-                })
-            }
-        })
-            .then((response) => {
-                setLanceData(response.data)
-            })
-
-    }, [])
 
 
     return (

@@ -2,8 +2,8 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { imgNotFound } from '../Main';
 
-const SwitchAxe = () => {
-    const [swaxeData, setSwaxeData] = useState([])
+const SwitchAxe = (props) => {
+    const swaxeData = props.swaxeData
     const filter = (assets) => {
         if (assets)
             return true;
@@ -11,21 +11,6 @@ const SwitchAxe = () => {
         else
             return false;
     }
-
-    useEffect(() => {
-        axios.get("https://mhw-db.com/weapons", {
-            params: {
-                q: JSON.stringify({
-                    type: "switch-axe"
-                })
-            }
-        })
-            .then((response) => {
-                setSwaxeData(response.data)
-            })
-
-    }, [])
-
 
     return (
         <div className="container-fluid row text-light MHW-font">

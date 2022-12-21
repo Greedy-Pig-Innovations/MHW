@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { imgNotFound } from '../Main';
 
-const Lbg = () => {
-    const [lbgData, setLbgData] = useState([])
+const Lbg = (props) => {
+    const lbgData = props.lbgData
     const filter = (assets) => {
         if (assets)
             return true;
@@ -11,20 +11,6 @@ const Lbg = () => {
         else
             return false;
     }
-
-    useEffect(() => {
-        axios.get("https://mhw-db.com/weapons", {
-            params: {
-                q: JSON.stringify({
-                    type: "light-bowgun"
-                })
-            }
-        })
-            .then((response) => {
-                setLbgData(response.data)
-            })
-
-    }, [])
 
     return (
         <div className="container-fluid row text-light MHW-font">
