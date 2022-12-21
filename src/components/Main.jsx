@@ -6,7 +6,7 @@ import SingleWeapon from "./Weapons/SingleWeapon";
 import axios from "axios";
 import { GreatSword, Bow, ChargeBlade, DualBlades, Gunlance, Hammer, Hbg, HuntingHorn, InsectGlaive, Lance, Lbg, LongSword, SnS, SwitchAxe } from "./Weapons";
 import { Head, Chest, Gloves, Legs, Waist } from './Armor';
-
+export const imgNotFound = "https://res.cloudinary.com/dofkj8qo6/image/upload/v1671577838/Image_Coming_Soon_zl2uti.png";
 
 const Main = () => {
     const [bowData, setBowData] = useState([])

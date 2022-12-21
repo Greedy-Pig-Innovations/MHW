@@ -2,15 +2,17 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import SingleWeapon from "./SingleWeapon";
+import { imgNotFound } from "../Main";
 
 const Bow = (props) => {
     const bowData = props.bowData
-    const imgNotFound = "https://res.cloudinary.com/dofkj8qo6/image/upload/v1671577838/Image_Coming_Soon_zl2uti.png";
+
+
 
     const handleClick = (id) => {
         console.log("clicked item: ", id)
         const singleWeapon = bowData.filter(weapon => {
-            return weapon.id == id
+            return weapon.id === id
         })
 
     }
