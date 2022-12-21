@@ -12,12 +12,12 @@ const Bow = (props) => {
 
     const handleClick = (id) => {
         console.log("clicked item: ", id)
-                axios.get(`https://mhw-db.com/weapons/${id}`)
-                .then((response) => {
-                    console.log(response)
-                    setSingleWeapon(response.data)
-                })         
-        }
+        axios.get(`https://mhw-db.com/weapons/${id}`)
+            .then((response) => {
+                console.log(response)
+                setSingleWeapon(response.data)
+            })
+    }
 
 
 
@@ -31,26 +31,27 @@ const Bow = (props) => {
     return (
         <div className="container-fluid row text-light MHW-font">
             <div className="sideBar col-3 row-fluid px-5">
-                <div className="card bg-secondary" style={{ height: "60vh" }}>
-                    {singleWeapon && singleWeapon.id ? 
+                <div className=" bg-evil" style={{ height: "60vh", textAlign: "center" }}>
+                    {singleWeapon && singleWeapon.id ?
                         <div>
-                        <div>
-                        <h2>{singleWeapon.name}</h2>
-                        <span>Rarity: {singleWeapon.rarity}</span>
-                        </div>
-                        <img src={singleWeapon.assets.image} />
+                            <div className="mt-3" style={{ border: "3px solid rgb(100, 50, 150)" }}>
+                                <h2>{singleWeapon.name}</h2>
+                            </div>
 
-                        <p>Raw: {singleWeapon.attack.raw}</p>
-                        <span>Display:{singleWeapon.attack.display}</span>
-                        <p>Coatings: {singleWeapon.coatings.length ? singleWeapon.coatings.map((coating, index) => {
-                            return (
-                                <div key={`coating-${index}`}>
-                                    <p>{coating}</p>
-                                </div>
-                            ) 
-                        }) : <>None</>}</p>
+                            <img className="" src={singleWeapon.assets.image} />
+
+                            <span>Rarity: {singleWeapon.rarity}</span>
+                            <p>Raw: {singleWeapon.attack.raw}</p>
+                            <span>Display:{singleWeapon.attack.display}</span>
+                            <p>Coatings: {singleWeapon.coatings.length ? singleWeapon.coatings.map((coating, index) => {
+                                return (
+                                    <div key={`coating-${index}`}>
+                                        <p>{coating}</p>
+                                    </div>
+                                )
+                            }) : <>None</>}</p>
                         </div>
-                 : <></> }
+                        : <></>}
                 </div>
             </div>
             <div className="col">
