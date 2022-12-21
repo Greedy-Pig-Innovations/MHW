@@ -71,19 +71,19 @@ const Main = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="Ailments" element={<Ailments />} />
                 <Route path="Bow" element={<Bow bowData={bowData} singleWeapon={singleWeapon} setSingleWeapon={setSingleWeapon}/>} />
-                <Route path="Charge-Blade" element={<ChargeBlade singleWeapon={singleWeapon} />} />
-                <Route path="Dual-Blades" element={<DualBlades  singleWeapon={singleWeapon}/>} />
-                <Route path="Great-Sword" element={<GreatSword  singleWeapon={singleWeapon}/>} />
-                <Route path="Gunlance" element={<Gunlance singleWeapon={singleWeapon} />} />
-                <Route path="Hammer" element={<Hammer singleWeapon={singleWeapon} />} />
-                <Route path="Heavy-Bow-Gun" element={<Hbg singleWeapon={singleWeapon} />} />
-                <Route path="Hunting-Horn" element={<HuntingHorn singleWeapon={singleWeapon} />} />
-                <Route path="Insect-Glaive" element={<InsectGlaive igData={igData} singleWeapon={singleWeapon}/>} />
-                <Route path="Lance" element={<Lance lanceData={lanceData} singleWeapon={singleWeapon}/>} />
-                <Route path="Light-Bow-Gun" element={<Lbg  lbgData={lbgData} singleWeapon={singleWeapon}/>} />
-                <Route path="Long-Sword" element={<LongSword  lsData={lsData} singleWeapon={singleWeapon}/>} />
-                <Route path="Sword-and-Shield" element={<SnS  snsData={snsData} singleWeapon={singleWeapon}/>} />
-                <Route path="Switch-Axe" element={<SwitchAxe  swaxeData={swaxeData} singleWeapon={singleWeapon}/>} />
+                <Route path="Charge-Blade" element={<ChargeBlade singleWeapon={singleWeapon} setSingleWeapon={setSingleWeapon}/>} />
+                <Route path="Dual-Blades" element={<DualBlades  singleWeapon={singleWeapon} setSingleWeapon={setSingleWeapon}/>} />
+                <Route path="Great-Sword" element={<GreatSword  singleWeapon={singleWeapon} setSingleWeapon={setSingleWeapon}/>} />
+                <Route path="Gunlance" element={<Gunlance singleWeapon={singleWeapon} setSingleWeapon={setSingleWeapon}/>} />
+                <Route path="Hammer" element={<Hammer singleWeapon={singleWeapon} setSingleWeapon={setSingleWeapon}/>} />
+                <Route path="Heavy-Bow-Gun" element={<Hbg singleWeapon={singleWeapon} setSingleWeapon={setSingleWeapon}/>} />
+                <Route path="Hunting-Horn" element={<HuntingHorn singleWeapon={singleWeapon} setSingleWeapon={setSingleWeapon}/>} />
+                <Route path="Insect-Glaive" element={<InsectGlaive igData={igData} singleWeapon={singleWeapon} setSingleWeapon={setSingleWeapon}/>} />
+                <Route path="Lance" element={<Lance lanceData={lanceData} singleWeapon={singleWeapon} setSingleWeapon={setSingleWeapon}/>} />
+                <Route path="Light-Bow-Gun" element={<Lbg  lbgData={lbgData} singleWeapon={singleWeapon} setSingleWeapon={setSingleWeapon}/>} />
+                <Route path="Long-Sword" element={<LongSword  lsData={lsData} singleWeapon={singleWeapon} setSingleWeapon={setSingleWeapon}/>} />
+                <Route path="Sword-and-Shield" element={<SnS  snsData={snsData} singleWeapon={singleWeapon} setSingleWeapon={setSingleWeapon}/>} />
+                <Route path="Switch-Axe" element={<SwitchAxe  swaxeData={swaxeData} singleWeapon={singleWeapon} setSingleWeapon={setSingleWeapon}/>} />
 
                 <Route path="Head" element={<Head />} />
                 <Route path="Chest" element={<Chest />} />
