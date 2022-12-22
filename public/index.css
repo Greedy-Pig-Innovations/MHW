@@ -171,7 +171,8 @@ ul li a {
 .e-icon {
     width: 16px;
     height: 16px;
+}
 
-    .link--elara:hover span {
-        transform: translate3d(0, -2px, 0);
-    }
+.link--elara:hover span {
+    transform: translate3d(0, -2px, 0);
+}

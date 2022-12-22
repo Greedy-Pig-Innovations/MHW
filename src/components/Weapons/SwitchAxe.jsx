@@ -146,5 +146,8 @@ const SwitchAxe = (props) => {
                         <>Loading Switch Axe...</>
                     )}
                 </div>
-                )
+            </div>
+        </div>
+    )
 }
+export default SwitchAxe;
