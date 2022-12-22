@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { imgNotFound } from "../Main";
-import SingleWeapon from "./SingleWeapon";
 
 const SwitchAxe = (props) => {
   const swaxeData = props.swaxeData;
@@ -29,7 +28,16 @@ const SwitchAxe = (props) => {
                 <h2>{singleWeapon.name}</h2>
                 <span>Rarity: {singleWeapon.rarity}</span>
               </div>
-              <img src={singleWeapon.assets.image} />
+              <div>
+                <img
+                  style={{ height: "auto", width: "130px", margin: "auto" }}
+                  src={
+                    filter(singleWeapon.assets)
+                      ? singleWeapon.assets.image
+                      : imgNotFound
+                  }
+                />
+              </div>
               <div>
                 <p>Raw: {singleWeapon.attack.raw}</p>
                 <p>Display:{singleWeapon.attack.display}</p>
@@ -43,6 +51,124 @@ const SwitchAxe = (props) => {
                     <>None</>
                   )}
                 </p>
+                <div>
+                  Element:{" "}
+                  {singleWeapon.elements.length ? (
+                    singleWeapon.elements.map((element, index) => {
+                      switch (element.type) {
+                        case "blast":
+                          return (
+                            <div key={index}>
+                              <img
+                                className="e-icon"
+                                src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671670235/Mhw/Blastblight_mylbi3.png"
+                              />
+                              <>{element.damage}</>
+                            </div>
+                          );
+                          break;
+                        case "poison":
+                          return (
+                            <div key={index}>
+                              <img
+                                className="e-icon"
+                                key={index}
+                                src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671670261/Mhw/Poison_uzyxp9.png"
+                              />
+                              <>{element.damage}</>
+                            </div>
+                          );
+                          break;
+                        case "dragon":
+                          return (
+                            <div key={index}>
+                              <img
+                                className="e-icon"
+                                key={index}
+                                src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671670287/Mhw/download_mizgia.png"
+                              />
+                              <>{element.damage}</>
+                            </div>
+                          );
+                          break;
+                        case "thunder":
+                          return (
+                            <div key={index}>
+                              <img
+                                className="e-icon"
+                                key={index}
+                                src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671670303/Mhw/download_n2sfop.png"
+                              />
+                              <>{element.damage}</>
+                            </div>
+                          );
+                          break;
+                        case "ice":
+                          return (
+                            <div key={index}>
+                              <img
+                                className="e-icon"
+                                key={index}
+                                src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671670330/Mhw/download_njoqfy.png"
+                              />
+                              <>{element.damage}</>
+                            </div>
+                          );
+                          break;
+                        case "sleep":
+                          return (
+                            <div key={index}>
+                              <img
+                                className="e-icon"
+                                key={index}
+                                src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671670355/Mhw/download_ifvf9n.png"
+                              />
+                              <>{element.damage}</>
+                            </div>
+                          );
+                          break;
+                        case "fire":
+                          return (
+                            <div key={index}>
+                              <img
+                                className="e-icon"
+                                key={index}
+                                src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671670543/Mhw/download_q7vvae.png"
+                              />
+                              <>{element.damage}</>
+                            </div>
+                          );
+                          break;
+                        case "water":
+                          return (
+                            <div key={index}>
+                              <img
+                                className="e-icon"
+                                key={index}
+                                src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671670557/Mhw/download_ibmjx7.png"
+                              />
+                              <>{element.damage}</>
+                            </div>
+                          );
+                          break;
+                        case "paralysis":
+                          return (
+                            <div key={index}>
+                              <img
+                                className="e-icon"
+                                key={index}
+                                src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671670574/Mhw/download_b61mup.png"
+                              />
+                              <>{element.damage}</>
+                            </div>
+                          );
+                          break;
+                      }
+                    })
+                  ) : (
+                    <>None</>
+                  )}
+                </div>
               </div>
               <div>
                 Slots:
@@ -89,7 +215,7 @@ const SwitchAxe = (props) => {
                   %
                 </p>
                 <p>
-                  Defense:{" "}
+                  Defense:
                   {singleWeapon.attributes.defense ? (
                     singleWeapon.attributes.defense
                   ) : (
