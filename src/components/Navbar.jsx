@@ -26,9 +26,7 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="Coll-id" >
                     <ul className="navbar-nav">
                         <li className="nav-item dropdown m-3">
-                            <a className="nav-link link link--elara" href="#"
-                                id="weaponsDropdownLink" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
+                            <a className="nav-link link link--elara" href="/Weapons">
                                 weapons
                             </a>
                         </li>

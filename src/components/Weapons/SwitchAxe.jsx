@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { imgNotFound } from "../Main";
-import { assignElement, assignSharpness, assignSlots } from "./helperFunctions";
+import { assignElement, assignSharpness, assignSlots } from "../helperFunctions";
 
 const SwitchAxe = (props) => {
     const swaxeData = props.swaxeData;
@@ -12,12 +12,7 @@ const SwitchAxe = (props) => {
         else return false;
     };
 
-    const handleClick = (id) => {
-        axios.get(`https://mhw-db.com/weapons/${id}`).then((response) => {
-            console.log(response);
-            setSingleWeapon(response.data);
-        });
-    };
+    
 
     return (
         <div className="container-fluid row text-light MHW-font">

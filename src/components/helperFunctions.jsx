@@ -119,10 +119,10 @@ export const assignSharpness = (
   blue,
   white,
   purple,
-  index
+  idx
 ) => {
   return (
-    <div className="sharpness-bar" key={`durability-${index}`}>
+    <div className="sharpness-bar" key={`durability-${idx}`}>
       <div
         className="red"
         style={{
@@ -170,12 +170,12 @@ export const assignSharpness = (
   );
 };
 
-export const assignSlots = (rank, index) => {
-  switch (rank) {
+export const assignSlots = (slot, idx) => {
+  switch (slot) {
     case 1:
       return (
         <img
-          key={`slot-${index}`}
+          key={`slot-${idx}`}
           src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671664648/Mhw/gem_level_1_aaolcn.png"
         />
       );
@@ -183,7 +183,7 @@ export const assignSlots = (rank, index) => {
     case 2:
       return (
         <img
-          key={`slot-${index}`}
+          key={`slot-${idx}`}
           src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671664781/Mhw/gem_level_2_waqkwk.png"
         />
       );
@@ -191,10 +191,64 @@ export const assignSlots = (rank, index) => {
     case 3:
       return (
         <img
-          key={`slot-${index}`}
+          key={`slot-${idx}`}
           src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671664734/Mhw/gem_level_3_zgidct.png"
         />
       );
       break;
   }
 };
+
+export const displayData = (name,rare,image,slots,raw,dmgType,affinity,defense,durability,index) => {
+   return  <div key={`weapon-${index}`}>
+      <div>
+        <h2>{name}</h2>
+        <p>R:{rare}</p>
+      </div>
+      <div>
+        <img src={image}/>
+      </div>
+      <div className="slots">
+      Slots:
+      {slots.length ? slots.map((slot,idx) => {
+         return  assignSlots(slot.rank,idx)
+      })  : <></>}
+      </div>
+      <div className="attk-val">
+        <p>Raw: {raw}</p>
+      </div>
+      
+
+
+      <div className="attributes">
+      Attributes:
+        <p> Affinity:
+           {affinity ? (
+              affinity
+                ) : (
+            <>0</>
+          )} %
+        </p>
+        <p>
+          Defense:
+            {defense ? (
+              defense
+                ) : (
+                  <>0</>
+            )}
+        </p>
+      </div>
+      {dmgType !== "projectile" ? 
+      <div className="sharpness">
+        Base sharpness, incremented by levels of the Handicraft SKill:
+        {durability.length ? durability.map((guage,idx) => {
+          console.log(guage)
+          return assignSharpness(guage.red,guage.orange,guage.yellow,guage.green,guage.blue,guage.white,guage.purple,idx)
+        }): <></> }
+      </div>
+      : <></>}
+
+
+    </div>
+
+}
