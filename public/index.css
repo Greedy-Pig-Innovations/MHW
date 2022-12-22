@@ -126,7 +126,7 @@ ul li a {
 }
 
 .link::before,
-.link::afte r {
+.link::after {
     position: absolute;
     width: 100%;
     height: 1px;
@@ -135,6 +135,7 @@ ul li a {
     left: 0;
     pointer-events: none;
 }
+
 
 .link::before {
     content: '';
@@ -160,6 +161,10 @@ ul li a {
     transition: transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
 }
 
+.link--elara:hover span {
+    transform: translate3d(0, -2px, 0);
+}
+
 
 .sharpness-bar {
     margin: 0 28px 15px;
@@ -171,8 +176,4 @@ ul li a {
 .e-icon {
     width: 16px;
     height: 16px;
-}
-
-.link--elara:hover span {
-    transform: translate3d(0, -2px, 0);
 }
