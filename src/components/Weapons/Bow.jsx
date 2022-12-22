@@ -40,7 +40,7 @@ const Bow = (props) => {
                             <div style={{ borderBottom: "1px solid #f8f9fa" }}>
                                 <img src={singleWeapon.assets.image} style={{ width: "200px" }} />
                             </div>
-                            <div className="row my-2 bb-light">
+                            <div className="row my-2" style={{ border: "" }}>
                                 <div className="col">
                                     <span>Rarity: {singleWeapon.rarity}</span>
                                 </div>
