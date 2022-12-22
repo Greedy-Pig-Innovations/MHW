@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { imgNotFound } from "../Main";
+import { assignSlots } from "./helperFunctions";
 
 const Lbg = (props) => {
   const lbgData = props.lbgData;
@@ -65,30 +66,7 @@ const Lbg = (props) => {
                 Slots:
                 {singleWeapon.slots.length ? (
                   singleWeapon.slots.map((slot, index) => {
-                    if (slot.rank == 1) {
-                      return (
-                        <img
-                          key={index}
-                          src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671664648/Mhw/gem_level_1_aaolcn.png"
-                        />
-                      );
-                    }
-                    if (slot.rank == 2) {
-                      return (
-                        <img
-                          key={index}
-                          src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671664781/Mhw/gem_level_2_waqkwk.png"
-                        />
-                      );
-                    }
-                    if (slot.rank == 3) {
-                      return (
-                        <img
-                          key={index}
-                          src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671664734/Mhw/gem_level_3_zgidct.png"
-                        />
-                      );
-                    }
+                    return assignSlots(slot.rank, index);
                   })
                 ) : (
                   <></>
