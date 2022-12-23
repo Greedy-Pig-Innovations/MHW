@@ -1,3 +1,4 @@
+
  export const assignElement = (type, damage, idx, hide) => {
 
   const hidden = (dmg) => {
@@ -111,10 +112,9 @@
           <>{hide ? hidden(damage) : damage}</>
         </div>
       );
-
-      break;
   }
 };
+
 
  export const assignSharpness = (
   red,
@@ -126,55 +126,54 @@
   purple,
   idx
 ) => {
-  return (
-    <div className="sharpness-bar" key={`durability-${idx}`}>
-      <div
-        className="red"
-        style={{
-          width: `${Math.floor((red / 400) * 100)}px`,
-        }}
-      ></div>
-      <div
-        className="orange"
-        style={{
-          width: `${Math.floor((orange / 400) * 100)}px`,
-        }}
-      ></div>
-      <div
-        className="yellow"
-        style={{
-          width: `${Math.floor((yellow / 400) * 100)}px`,
-        }}
-      ></div>
-      <div
-        className="green"
-        style={{
-          width: `${Math.floor((green / 400) * 100)}px`,
-        }}
-      ></div>
-      <div
-        className="blue"
-        style={{
-          width: `${Math.floor((blue / 400) * 100)}px`,
-        }}
-      ></div>
-      <div
-        className="white"
-        style={{
-          width: `${Math.floor((white / 400) * 100)}px`,
-        }}
-      ></div>
-      <div
-        className="purple"
-        style={{
-          width: `${Math.floor((purple / 400) * 100)}px`,
-        }}
-      ></div>
-      <div className="clearfix"></div>
-    </div>
-  );
+    return (
+        <div className="sharpness-bar" key={`durability-${idx}`}>
+            <div
+                className="red"
+                style={{
+                    width: `${Math.floor((red / 400) * 100)}px`,
+                }}
+            ></div>
+            <div
+                className="orange"
+                style={{
+                    width: `${Math.floor((orange / 400) * 100)}px`,
+                }}
+            ></div>
+            <div
+                className="yellow"
+                style={{
+                    width: `${Math.floor((yellow / 400) * 100)}px`,
+                }}
+            ></div>
+            <div
+                className="green"
+                style={{
+                    width: `${Math.floor((green / 400) * 100)}px`,
+                }}
+            ></div>
+            <div
+                className="blue"
+                style={{
+                    width: `${Math.floor((blue / 400) * 100)}px`,
+                }}
+            ></div>
+            <div
+                className="white"
+                style={{
+                    width: `${Math.floor((white / 400) * 100)}px`,
+                }}
+            ></div>
+            <div
+                className="purple"
+                style={{
+                    width: `${Math.floor((purple / 400) * 100)}px`,
+                }}
+            ></div>
+            <div className="clearfix"></div>
+        </div>
+    );
 };
-
  export const assignSlots = (slot, idx) => {
   switch (slot) {
     case 1:
@@ -285,13 +284,13 @@ export const displayData = (name,rare,image,slots,raw,elements,cat,dmgType,affin
            {affinity ? (
               affinity
                 ) : (
-            <>0</>
-          )} %
-        </p>
-        <p>
-          Defense:
-            {defense ? (
-              defense
+                    <>0</>
+                )} %
+            </p>
+            <p>
+                Defense:
+                {defense ? (
+                    defense
                 ) : (
                   <>0</>
             )}
