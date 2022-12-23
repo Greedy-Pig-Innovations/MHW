@@ -33,12 +33,10 @@ const Armor = () => {
 
     return (
         <div className="row">
-            <span className="col-4">
+            <span className="col-3">
                 {clicked ? (<SingleArmor props={item} />) : (
-                    <div className="col-3">
-                        <div className="jp-shadow MHW-font bg-blur text-light p-4 mt-5 ml-5" style={{ width: "18rem", borderRadius: "10px", minheight: "55vh" }}>
-                            <div className="card-title">CLICK A CARD</div>
-                        </div>
+                    <div className="jp-shadow MHW-font bg-blur text-light p-4 mt-5 ml-5" style={{ borderRadius: "10px", minHeight: "50vh", minWidth: "18rem" }}>
+                        <div className="card-title">CLICK A CARD</div>
                     </div>
                 )}
 
