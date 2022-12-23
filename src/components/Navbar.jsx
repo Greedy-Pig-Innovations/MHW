@@ -38,7 +38,7 @@ const Navbar = () => {
                     </ul>
                     <ul className="navbar-nav ml-auto ml-5">
                         <li className="nav-item m-3">
-                            <a href="https://github.com/Greedy-Pig-Innovations/MHW" target="_blank">
+                            <a href="https://github.com/Greedy-Pig-Innovations" target="_blank">
                                 <img src={gitHubImg} style={{ width: "25px" }} />
                             </a>
                         </li>

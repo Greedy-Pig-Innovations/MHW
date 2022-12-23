@@ -7,25 +7,25 @@ const MHW_url = 'https://youtu.be/Ro6r15wzp2o';
 
 const Home = () => {
     return (
-        <div className="container-lg " style={{ textAlign: "center" }}>
+        <div className="container-lg" style={{ textAlign: "center" }}>
             <div className="row">
                 <div className="col-3">
-                    <div className="p-4 bg-blur text-light MHW-font m-5 jp-shadow" style={{ minHeight: "80vh" }}>
+                    <div className="p-4 bg-blur text-light MHW-font m-5 jp-shadow" style={{borderRadius: "10px"}}>
                         <div className="">ABOUT PROJECT</div>
                         <div className="mt-5 row d-flex justify-content-center">
                             <img src={companyImg} style={{ maxWidth: "10vw" }} className="jp-shadow" />
                         </div>
-                        <div className="row">
+                        <div className="row ">
                             <p className="px-5 mt-5">DEMO website, built with React and Bootstrap.
                                 All data comes from the public Monster Hunter World API found <a href='https://docs.mhw-db.com/' target="_blank" className=" link link--elara" style={{ width: "50px" }}>HERE</a></p>
                             <p>We are showcasing the Armor and Weapons data, as a personal project. Our lead developer is Nelson Luna, with assistance from Juan Perez. We will be continuing our efforts towards new projects that will be available on our GitHub. Make sure to follow us.</p>
 
-                            <p style={{ fontSize: "10px" }}>P.S. All rights reserved,  Monster Hunter world official website:<a href="https://www.monsterhunterworld.com/" target="_blank" className="link link--elara" style={{ width: "50px" }}> HERE</a></p>
+                            <p style={{ fontSize: "10px" ,margin: "0 auto"}}>P.S. All rights reserved,  Monster Hunter world official website:<a href="https://www.monsterhunterworld.com/" target="_blank" className="link link--elara" style={{ width: "50px" }}> HERE</a></p>
                         </div>
                     </div>
                 </div>
                 <div className="col">
-                    <div className="p-2 bg-blur text-light MHW-font m-5 jp-shadow" style={{ height: "80vh", overflow: "auto", overflowX: "hidden", position: "absolute" }}>
+                    <div className="p-2 bg-blur text-light MHW-font m-5 jp-shadow" style={{ height: "80vh", overflow: "auto", overflowX: "hidden", position: "absolute",borderRadius: "10px" }}>
                         <div className="card-title" style={{ borderBottom: "2px solid rgba(150,150,150,.5)", borderRadius: "5px" }}> <h2>Monster Hunter World</h2></div>
                         <div className="p-2 pb-3 d-flex justify-content-center" style={{ borderBottom: "2px solid rgba(150,150,150,.5)", borderRadius: "5px" }}>
                             <ReactPlayer url={MHW_url} width={"50vw"} height={"50vh"} volume={10} controls={true} />

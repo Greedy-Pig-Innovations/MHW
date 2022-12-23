@@ -205,3 +205,7 @@ ul li a {
 .purple {
     background-color: #885aec;
 }
+
+.line{
+    border-bottom: 2px solid rgba(150,150,150,.5);
+}

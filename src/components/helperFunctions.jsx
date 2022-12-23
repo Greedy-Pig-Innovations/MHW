@@ -368,7 +368,7 @@ export const displayData = (name, rare, image, slots, raw, elements, cat, dmgTyp
                     </div>
                 </div>
             </div>
-            <div className="row" >
+            <div className="row line mb-3" >
                 <div className="col" >
                     <div><h6>Weapon-Type Specifics:</h6></div>
                 </div>
@@ -381,18 +381,20 @@ export const displayData = (name, rare, image, slots, raw, elements, cat, dmgTyp
                             </div>
                             : <></>}
                         {cat == "light-bowgun" || cat == "heavy-bowgun" ?
-                            <div>
-                                Ammo:
+                        <div>
+                            <h6>Ammo:</h6>
+                            <div className="row">
                                 {ammo.map((ammo, idx) => {
-                                    return <div className="ammo-list" key={`ammo-${idx}`}>
+                                    return <div className="col" key={`ammo-${idx}`}>
                                         <div>{ammo.type}
                                         </div>
                                     </div>
                                 })}
-                                <div>
-                                    Special Ammo: {specialAmmo == null ? <>None</> : <>{specialAmmo}</>}
+                            </div>
+                                <div className="mt-4">
+                                 Special Ammo: {specialAmmo == null ? <>None</> : <>{specialAmmo}</>}
                                 </div>
-                                <div>
+                                <div className="mt-2">
                                     Deviation: {deviation}
                                 </div>
                             </div>
@@ -401,9 +403,9 @@ export const displayData = (name, rare, image, slots, raw, elements, cat, dmgTyp
 
                         {cat == "bow" ?
                             <div>
-                                <h6 className="mb-4"> Coatings: </h6>
+                                <h6 className="row"> Coatings: </h6>
                                 {coatings.map((coating, idx) => {
-                                    return <div key={`coating-${idx}`}>
+                                    return <div  className="row" key={`coating-${idx}`}>
                                         <div>{coating}</div>
                                     </div>
                                 })}
@@ -420,7 +422,7 @@ export const displayData = (name, rare, image, slots, raw, elements, cat, dmgTyp
 
                         {cat == "insect-glaive" ? <div>
                             <div>
-                                <h6 className="mr-1 mb-4"> Boost Type:</h6> <>{boost}</>
+                                <h6 className="mr-1 mb-2"> Boost Type:</h6> <>{boost}</>
                             </div>
                         </div> : <></>}
                     </div>
@@ -429,7 +431,7 @@ export const displayData = (name, rare, image, slots, raw, elements, cat, dmgTyp
 
 
             {dmgType !== "projectile" ?
-                <div className="sharpness">
+                <div className="sharpness mt-1">
                     Base sharpness, incremented by levels of the Handicraft Skill:
 
                     {durability.length ? durability.map((guage, idx) => {
