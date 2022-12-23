@@ -4,7 +4,6 @@ export const assignElement = (type, damage, idx, hide) => {
     const hidden = (dmg) => {
         return `(${dmg})`;
     }
-
     switch (type) {
         case "blast":
             return (
@@ -226,6 +225,7 @@ export const assignElement = (type, damage, idx, hide) => {
 
             break;
     }
+
 };
 
 

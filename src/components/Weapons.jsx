@@ -29,11 +29,17 @@ const Weapons = (props) => {
         });
     };
 
+    useEffect(() => {
+        setTimeout(()=>{
+            setWeapon([])
+           }, 450)
+    }, [shown]);
+
 
     return (
         <div className="row">
         <span className="col-3 mt-5 ml-5">
-            <div className="bg-blur text-white MHW-font p-2 jp-shadow" style={{borderRadius: "10px"}}>
+            <div className="bg-blur text-white MHW-font p-2 jp-shadow" style={{borderRadius: "10px", minHeight:"50vh"}}>
                 {weapon && weapon.id ?
                             displayData(weapon.name,weapon.rarity,weapon.assets.image,weapon.slots,weapon.attack.raw,weapon.elements,weapon.type,weapon.damageType,weapon.attributes.affinity,weapon.attributes.defense,weapon.durability,weapon.phial,weapon.shelling,weapon.coatings,weapon.boostType,weapon.ammo,weapon.deviation,weapon.specialAmmo)  
                     : <></>}
