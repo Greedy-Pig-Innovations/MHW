@@ -1,3 +1,4 @@
+
  export const assignElement = (type, damage, idx, hide) => {
 
   const hidden = (dmg) => {
@@ -112,9 +113,119 @@
         </div>
       );
 
-      break;
-  }
+
+    switch (type) {
+        case "blast":
+            return (
+                <div key={index}>
+                    <img
+                        className="e-icon"
+                        src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671670235/Mhw/Blastblight_mylbi3.png"
+                    />
+                    <>{hide ? hidden(damage) : damage}</>
+                </div>
+            );
+            break;
+        case "poison":
+            return (
+                <div key={index}>
+                    <img
+                        className="e-icon"
+                        key={index}
+                        src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671670261/Mhw/Poison_uzyxp9.png"
+                    />
+                    <>{hide ? hidden(damage) : damage}</>
+                </div>
+            );
+            break;
+        case "dragon":
+            return (
+                <div key={index}>
+                    <img
+                        className="e-icon"
+                        key={index}
+                        src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671670287/Mhw/download_mizgia.png"
+                    />
+                    <>{hide ? hidden(damage) : damage}</>
+                </div>
+            );
+            break;
+        case "thunder":
+            return (
+                <div key={index}>
+                    <img
+                        className="e-icon"
+                        key={index}
+                        src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671670303/Mhw/download_n2sfop.png"
+                    />
+                    <>{hide ? hidden(damage) : damage}</>
+                </div>
+            );
+            break;
+        case "ice":
+            return (
+                <div key={index}>
+                    <img
+                        className="e-icon"
+                        key={index}
+                        src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671670330/Mhw/download_njoqfy.png"
+                    />
+                    <>{hide ? hidden(damage) : damage}</>
+                </div>
+            );
+            break;
+        case "sleep":
+            return (
+                <div key={index}>
+                    <img
+                        className="e-icon"
+                        key={index}
+                        src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671670355/Mhw/download_ifvf9n.png"
+                    />
+                    <>{hide ? hidden(damage) : damage}</>
+                </div>
+            );
+            break;
+        case "fire":
+            return (
+                <div key={index}>
+                    <img
+                        className="e-icon"
+                        key={index}
+                        src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671670543/Mhw/download_q7vvae.png"
+                    />
+                    <>{hide ? hidden(damage) : damage}</>
+                </div>
+            );
+            break;
+        case "water":
+            return (
+                <div key={index}>
+                    <img
+                        className="e-icon"
+                        key={index}
+                        src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671670557/Mhw/download_ibmjx7.png"
+                    />
+                    <>{hide ? hidden(damage) : damage}</>
+                </div>
+            );
+            break;
+        case "paralysis":
+            return (
+                <div key={index}>
+                    <img
+                        className="e-icon"
+                        key={index}
+                        src="https://res.cloudinary.com/daif0s5gi/image/upload/v1671670574/Mhw/download_b61mup.png"
+                    />
+                    <>{hide ? hidden(damage) : damage}</>
+                </div>
+            );
+
+            break;
+    }
 };
+
 
  export const assignSharpness = (
   red,
@@ -126,55 +237,54 @@
   purple,
   idx
 ) => {
-  return (
-    <div className="sharpness-bar" key={`durability-${idx}`}>
-      <div
-        className="red"
-        style={{
-          width: `${Math.floor((red / 400) * 100)}px`,
-        }}
-      ></div>
-      <div
-        className="orange"
-        style={{
-          width: `${Math.floor((orange / 400) * 100)}px`,
-        }}
-      ></div>
-      <div
-        className="yellow"
-        style={{
-          width: `${Math.floor((yellow / 400) * 100)}px`,
-        }}
-      ></div>
-      <div
-        className="green"
-        style={{
-          width: `${Math.floor((green / 400) * 100)}px`,
-        }}
-      ></div>
-      <div
-        className="blue"
-        style={{
-          width: `${Math.floor((blue / 400) * 100)}px`,
-        }}
-      ></div>
-      <div
-        className="white"
-        style={{
-          width: `${Math.floor((white / 400) * 100)}px`,
-        }}
-      ></div>
-      <div
-        className="purple"
-        style={{
-          width: `${Math.floor((purple / 400) * 100)}px`,
-        }}
-      ></div>
-      <div className="clearfix"></div>
-    </div>
-  );
+    return (
+        <div className="sharpness-bar" key={`durability-${idx}`}>
+            <div
+                className="red"
+                style={{
+                    width: `${Math.floor((red / 400) * 100)}px`,
+                }}
+            ></div>
+            <div
+                className="orange"
+                style={{
+                    width: `${Math.floor((orange / 400) * 100)}px`,
+                }}
+            ></div>
+            <div
+                className="yellow"
+                style={{
+                    width: `${Math.floor((yellow / 400) * 100)}px`,
+                }}
+            ></div>
+            <div
+                className="green"
+                style={{
+                    width: `${Math.floor((green / 400) * 100)}px`,
+                }}
+            ></div>
+            <div
+                className="blue"
+                style={{
+                    width: `${Math.floor((blue / 400) * 100)}px`,
+                }}
+            ></div>
+            <div
+                className="white"
+                style={{
+                    width: `${Math.floor((white / 400) * 100)}px`,
+                }}
+            ></div>
+            <div
+                className="purple"
+                style={{
+                    width: `${Math.floor((purple / 400) * 100)}px`,
+                }}
+            ></div>
+            <div className="clearfix"></div>
+        </div>
+    );
 };
-
  export const assignSlots = (slot, idx) => {
   switch (slot) {
     case 1:
@@ -285,13 +395,13 @@ export const displayData = (name,rare,image,slots,raw,elements,cat,dmgType,affin
            {affinity ? (
               affinity
                 ) : (
-            <>0</>
-          )} %
-        </p>
-        <p>
-          Defense:
-            {defense ? (
-              defense
+                    <>0</>
+                )} %
+            </p>
+            <p>
+                Defense:
+                {defense ? (
+                    defense
                 ) : (
                   <>0</>
             )}
