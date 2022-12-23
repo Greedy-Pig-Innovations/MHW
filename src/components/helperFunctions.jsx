@@ -351,8 +351,24 @@ export const displayData = (name, rare, image, slots, raw, elements, cat, dmgTyp
                     }) : <>None</>}</h6>
                 </div>
             </div>
-
-            <div className="row" style={{ borderBottom: "2px solid rgba(150,150,150,.5)", borderRadius: "5px" }}>
+            <div className="attributes">
+                <div className="row" style={{ borderBottom: "2px solid rgba(150,150,150,.5)", borderRadius: "5px" }}>
+                    <h6 className="col" >Attributes:</h6>
+                    <div className="col">
+                        Affinity: {affinity ? (
+                            affinity
+                        ) : (<> 0% </>)}
+                    </div>
+                    <div className="col">
+                        Defense: {defense ? (
+                            defense
+                        ) : (
+                            <h6>0</h6>
+                        )}
+                    </div>
+                </div>
+            </div>
+            <div className="row" >
                 <div className="col" >
                     <div><h6>Weapon-Type Specifics:</h6></div>
                 </div>
@@ -411,22 +427,7 @@ export const displayData = (name, rare, image, slots, raw, elements, cat, dmgTyp
                 </div>
             </div>
 
-            <div className="attributes">
-                <h6 className="row">Attributes:</h6>
-                <p> Affinity: {affinity ? (
-                    affinity
-                ) : (
-                    <>0</>
-                )} %
-                </p>
-                <p>
-                    Defense: {defense ? (
-                        defense
-                    ) : (
-                        <>0</>
-                    )}
-                </p>
-            </div>
+
             {dmgType !== "projectile" ?
                 <div className="sharpness">
                     Base sharpness, incremented by levels of the Handicraft Skill:
