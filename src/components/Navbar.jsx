@@ -35,20 +35,17 @@ const Navbar = () => {
                                 armor
                             </a>
                         </li>
-                        <li className="nav-item m-3">
-                            <a className="nav-link link link--elara" href="#">
-                                items</a>
-                        </li>
                     </ul>
                     <ul className="navbar-nav ml-auto ml-5">
                         <li className="nav-item m-3">
-                            <img src={gitHubImg} style={{ width: "25px" }} />
+                            <a href="https://github.com/Greedy-Pig-Innovations/MHW" target="_blank">
+                                <img src={gitHubImg} style={{ width: "25px" }} />
+                            </a>
                         </li>
                         <li className="nav-item m-3">
-                            <img src={linkedInImg} style={{ width: "25px" }} />
-                        </li>
-                        <li className="nav-item m-3">
-                            <img src={emailImg} style={{ width: "25px" }} />
+                            <a href="mailto: contact.us@greedy-pig-innov.com">
+                                <img src={emailImg} style={{ width: "25px" }} />
+                            </a>
                         </li>
                     </ul>
                 </div>
