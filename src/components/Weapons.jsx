@@ -30,7 +30,9 @@ const Weapons = (props) => {
     };
 
     useEffect(() => {
-        setWeapon(null)
+        setTimeout(()=>{
+            setWeapon([])
+           }, 450)
     }, [shown]);
 
 
